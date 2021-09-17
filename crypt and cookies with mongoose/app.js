@@ -1,4 +1,4 @@
-//As early as possible in your application, require and configure dotenv.
+
 require('dotenv').config()// .env
 var encrypt = require('mongoose-encryption');
 
@@ -72,7 +72,7 @@ passport.deserializeUser(User.deserializeUser());
 
 
 
-/*  Passport-Local Mongoose with  express-session    */ 
+
 app.post("/register", function(req, res){
 
   User.register({username: req.body.username}, req.body.password, function(err, user){
