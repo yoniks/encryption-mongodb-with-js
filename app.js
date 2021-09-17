@@ -1,4 +1,4 @@
-//As early as possible in your application, require and configure dotenv.
+
 require('dotenv').config()//
 var encrypt = require('mongoose-encryption');
 
