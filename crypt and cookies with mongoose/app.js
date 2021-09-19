@@ -1,16 +1,4 @@
 
-require('dotenv').config()// .env
-var encrypt = require('mongoose-encryption');
-
-const bcrypt = require('bcrypt');
-const saltRounds = 10;
-//const myPlaintextPassword = 's0/\/\P4$$w0rD';
-//const someOtherPlaintextPassword = 'not_bacon';
-
-
-var fs = require('fs');
-var md5 = require('md5');
-
 
 const express = require('express');
 const session = require('express-session');// session ID
@@ -25,14 +13,10 @@ const passportLocalMongoose = require("passport-local-mongoose");
  const {render} = require("ejs");
  const mongoose = require('mongoose');
 const { isElement } = require('lodash');
-
-
-
   const port=3000;
 
  app.use(express.static("public"));
  app.use(bodyParser.urlencoded({extended:true}));
-
  app.set('view engine','ejs');
 
 
@@ -44,7 +28,6 @@ const { isElement } = require('lodash');
 }));
 app.use(passport.initialize());
 app.use(passport.session());
-
 //mongoose.set("useCreateIndex", true);
 
 main().catch(err => console.log(err));
@@ -66,11 +49,6 @@ const User = new mongoose.model("User", userSchema);
 passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
-
-
-
-
-
 
 
 app.post("/register", function(req, res){
@@ -97,8 +75,6 @@ has a few pieces of information that tells our server about the user, namely tha
 to view any of the pages that require authentication.
 So let's go ahead and hit save and
 */
-
-
   const user = new User({
     username: req.body.username,
     password: req.body.password
