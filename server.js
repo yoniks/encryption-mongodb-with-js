@@ -199,7 +199,7 @@ app.post("/", async (req, res)=>{
      const status1 ={ "g":"קופסא","h":"שתי קופסאות","i":"יש וביקשתי שיכינו","i1":"אין וביקשתי שיכינו","j":"אין בכלל","k":"ריקה","l":"חצי","m":"מלאה","n":"חסר" };
   
     const d = new Date();
-    const uri = "mongodb+srv://RemindToRenew:AcYnl0100HjkWqcY@websw.dfksw.mongodb.net/test?retryWrites=true&w=majority";
+    const uri = "mongodb";
     const client = new MongoClient(uri);
   
 
