@@ -274,7 +274,7 @@ app.get("/", async (req, res) => {
     const noteTime = [];
   
        // run().catch(console.dir);
-    const uri = "mongodb+srv://RemindToRenew:AcYnl0100HjkWqcY@websw.dfksw.mongodb.net/test?retryWrites=true&w=majority";
+    const uri = "mongodb";
     const client = new MongoClient(uri);
 
 
